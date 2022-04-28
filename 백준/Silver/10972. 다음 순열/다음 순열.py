@@ -7,14 +7,9 @@ while i > 0 and t[i - 1] > t[i]:
 if i <= 0:
     print(-1)
     exit()
+
 j = n - 1
 while t[j] < t[i - 1]:
     j -= 1
 t[i - 1], t[j] = t[j], t[i - 1]
-
-j = n - 1
-while i < j:
-    t[i], t[j] = t[j], t[i]
-    i += 1
-    j -= 1
-print(*t)
+print(*(t[:i] + t[i:][::-1]))
