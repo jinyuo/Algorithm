@@ -1,23 +1,20 @@
 import sys
-
-def next_permutation(a):
-    i = len(a) - 1
-    while i > 0 and a[i - 1] >= a[i]:
+t = int(sys.stdin.readline())
+for _ in range(t):
+    word = list(sys.stdin.readline()[:-1])
+    i = len(word) - 1
+    while i > 0 and word[i - 1] >= word[i]:
         i -= 1
-    if i <= 0: return False
-    j = len(a) - 1
-    while a[i - 1] >= a[j]:
+    if i <= 0:
+        print("".join(word))
+        continue
+    j = len(word) - 1
+    while word[j] <= word[i - 1]:
         j -= 1
-    a[i - 1], a[j] = a[j], a[i - 1]
-    j = len(a) - 1
+    word[i - 1], word[j] = word[j], word[i - 1]
+    j = len(word) - 1
     while i < j:
-        a[i], a[j] = a[j], a[i]
+        word[i], word[j] = word[j], word[i]
         i += 1
         j -= 1
-    return True
-
-if __name__ == '__main__':
-    for _ in range(int(input())):
-        arr = list(map(str, sys.stdin.readline().rstrip()))
-        next_permutation(arr)
-        print(''.join(map(str, arr)))
+    print("".join(word))
