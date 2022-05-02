@@ -1,10 +1,10 @@
 import sys
 sys.stdin.readline()
-a = set(map(int, sys.stdin.readline().split()))
+a = list(map(int, sys.stdin.readline().split()))
 b = set(map(int, sys.stdin.readline().split()))
-subset = sorted(a - b)
-if len(subset) == 0:
+sub = [i for i in sorted(a) if i not in b]
+if len(sub) == 0:
     print(0)
 else:
-    print(len(subset))
-    print(*subset)
+    print(len(sub))
+    print(*sub)
