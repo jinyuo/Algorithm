@@ -1,15 +1,16 @@
-input = __import__('sys').stdin.readline
 from itertools import permutations
 from math import factorial
-
-while 1:
-    try: a, n = input().split()
-    except: break
-    n = int(n)
-    if n > factorial(len(a)):
-        print(a, n, "= No permutation")
+while True:
+    try:
+        inp, l = __import__('sys').stdin.readline().split()
+    except:
+        exit()
+    l = int(l)
+    if l > factorial(len(inp)):
+        print(inp, l, "= No permutation")
         continue
-    Z = n
-    for Q in permutations(a, len(a)):
-        Z-= 1
-        if Z == 0: print(a, n, '=', ''.join(Q)); break
+    i = 0
+    for t in permutations(inp, len(inp)):
+        i += 1
+        if i == l:
+            print(inp, l, "=", ''.join(t))
