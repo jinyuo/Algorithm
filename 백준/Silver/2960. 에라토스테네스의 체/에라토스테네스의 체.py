@@ -1,17 +1,15 @@
 import sys
 n, k = map(int, sys.stdin.readline().split())
 nums = [i for i in range(2, n + 1)]
-cnt = 0
+ord = []
 while nums:
     p = nums.pop(0)
-    cnt += 1
-    if cnt == k:
-        print(p)
-        exit()
+    ord.append(p)
     for i in nums:
         if i % p == 0:
+            ord.append(i)
             nums.remove(i)
-            cnt += 1
-            if cnt == k:
-                print(i)
-                exit()
+
+    if len(ord) >= k:
+        print(ord[k - 1])
+        exit()
