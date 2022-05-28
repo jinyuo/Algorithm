@@ -6,12 +6,7 @@ WITH RECURSIVE STAND AS (
         WHERE HOUR < 23
     )
 
-# SELECT *
-#     FROM STAND;
-
-
-
-SELECT s.HOUR, IFNULL(s.COUNT + a.COUNT, 0) as COUNT
+SELECT s.HOUR, IFNULL(a.COUNT, 0) as COUNT
     FROM STAND as s
     LEFT JOIN (
         SELECT DATE_FORMAT(DATETIME,"%H") as HOUR, count(*) as COUNT
@@ -20,4 +15,3 @@ SELECT s.HOUR, IFNULL(s.COUNT + a.COUNT, 0) as COUNT
             ORDER BY DATE_FORMAT(DATETIME,"%H")
         ) a
     ON s.HOUR = a.HOUR
-    
