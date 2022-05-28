@@ -1,0 +1,6 @@
+from itertools import permutations
+
+def solution(numbers):
+    a = set(sum(com) for com in permutations(numbers, 2))
+    a = sorted(list(a))
+    return a
