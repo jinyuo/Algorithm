@@ -1,10 +1,7 @@
 -- 코드를 입력하세요
-SELECT NAME, count
-    FROM (
-        SELECT NAME, count(*) as count
-        FROM ANIMAL_INS
-        WHERE NAME <> 'NULL'
-        GROUP BY NAME
-    ) a
-    WHERE count >= 2
-    ORDER BY NAME;
+SELECT NAME, count(NAME)
+    FROM ANIMAL_INS
+    WHERE NAME IS NOT NULL
+    GROUP BY NAME
+    HAVING count(NAME) > 1
+    ORDER BY NAME
