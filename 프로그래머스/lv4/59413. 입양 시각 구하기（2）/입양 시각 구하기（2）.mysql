@@ -1,0 +1,23 @@
+-- 코드를 입력하세요
+WITH RECURSIVE STAND AS (
+        SELECT 0 AS HOUR, 0 AS COUNT
+        UNION ALL
+        SELECT HOUR+1, 0 FROM STAND 
+        WHERE HOUR < 23
+    )
+
+# SELECT *
+#     FROM STAND;
+
+
+
+SELECT s.HOUR, IFNULL(s.COUNT + a.COUNT, 0) as COUNT
+    FROM STAND as s
+    LEFT JOIN (
+        SELECT DATE_FORMAT(DATETIME,"%H") as HOUR, count(*) as COUNT
+            FROM ANIMAL_OUTS
+            GROUP BY DATE_FORMAT(DATETIME,"%H")
+            ORDER BY DATE_FORMAT(DATETIME,"%H")
+        ) a
+    ON s.HOUR = a.HOUR
+    
