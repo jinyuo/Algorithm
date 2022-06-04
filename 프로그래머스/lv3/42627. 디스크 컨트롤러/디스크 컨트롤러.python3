@@ -1,0 +1,20 @@
+import heapq
+
+def solution(jobs):
+    jobs.sort()
+    l = len(jobs)
+    t = 0
+    r = 0
+    while jobs:
+        wait = sorted([i for i in jobs if i[0] <= t], key=lambda x: x[1])
+        if len(wait) == 0:
+            wait = jobs[0]
+            t = sum(wait)
+            r += (t - wait[0])
+        else:
+            wait = wait[0]
+            t += wait[1]
+            r += (t - wait[0])
+        jobs.remove(wait)
+
+    return r // l
