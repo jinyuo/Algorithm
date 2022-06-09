@@ -1,6 +1,6 @@
 def solution(id_list, report, k):
     declare = dict()
-    for r in report:
+    for r in set(report):
         user_id, declare_id = r.split()
         if declare_id not in declare.keys():
             declare[declare_id] = set()
