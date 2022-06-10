@@ -1,5 +1,4 @@
 def solution(lottos, win_nums):
-    answer = []
     lottos = set(lottos)
     lottos.discard(0)
     win_nums.sort()
