@@ -4,12 +4,12 @@ n = int(sys.stdin.readline())
 p_nums = []
 n_nums = []
 for _ in range(n):
-    n = int(sys.stdin.readline())
-    if n != 0:
-        if n > 0:
-            heapq.heappush(p_nums, n)
+    i = int(sys.stdin.readline())
+    if i != 0:
+        if i > 0:
+            heapq.heappush(p_nums, i)
         else:
-            heapq.heappush(n_nums, -1 * n)
+            heapq.heappush(n_nums, -1 * i)
     else:
         if not p_nums and not n_nums:
             print(0)
