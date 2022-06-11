@@ -1,21 +1,26 @@
 import sys
 import heapq
 n = int(sys.stdin.readline())
-nums = []
-ab_nums = []
+p_nums = []
+n_nums = []
 for _ in range(n):
     n = int(sys.stdin.readline())
     if n != 0:
-        nums.append(n)
-        heapq.heappush(ab_nums, abs(n))
+        if n > 0:
+            heapq.heappush(p_nums, n)
+        else:
+            heapq.heappush(n_nums, -1 * n)
     else:
-        if len(ab_nums) == 0:
+        if not p_nums and not n_nums:
             print(0)
         else:
-            i = heapq.heappop(ab_nums)
-            if -1 * i in nums:
-                nums.remove(-1 * i)
-                print(-1 * i)
+            if not n_nums:
+                print(heapq.heappop(p_nums))
+            elif not p_nums:
+                print(-1 * heapq.heappop(n_nums))
+            elif p_nums[0] == n_nums[0]:
+                print(-1 * heapq.heappop(n_nums))
+            elif p_nums[0] > n_nums[0]:
+                print(-1 * heapq.heappop(n_nums))
             else:
-                nums.remove(i)
-                print(i)
+                print(heapq.heappop(p_nums))
