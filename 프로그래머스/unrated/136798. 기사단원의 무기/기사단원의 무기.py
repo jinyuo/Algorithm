@@ -14,9 +14,5 @@ def get_divisor_cnt(n):
 def solution(number, limit, power):
     answer = 0
     list_power = [get_divisor_cnt(i) for i in range(1, number + 1)]
-
-    for i in range(number):
-        if list_power[i] > limit:
-            list_power[i] = power    
-    
+    list_power = [p for p in list_power if p <= limit] + [power for p in list_power if p > limit]
     return sum(list_power)
