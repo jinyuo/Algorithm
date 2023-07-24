@@ -1,8 +1,7 @@
 def solution(babbling):
-    defi = ["aya", "ye", "woo", "ma"]
     answer = 0
     for b in babbling:
-        for d in defi:
+        for d in ["aya", "ye", "woo", "ma"]:
             if d * 2 not in b:
                 b = b.replace(d, ' ')
         b = b.replace(' ', '')
