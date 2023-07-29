@@ -6,8 +6,7 @@ def solution(keymap, targets):
             if key[i] not in key_map.keys():
                 key_map[key[i]] = i
             else:
-                if i < key_map[key[i]]:
-                    key_map[key[i]] = i
+                key_map[key[i]] = min(key_map[key[i]], i)
     
     for target in targets:
         try:
