@@ -1,13 +1,10 @@
 def solution(keymap, targets):
-    answer = []
     key_map = dict()
     for key in keymap:
         for i in range(len(key)):
-            if key[i] not in key_map.keys():
-                key_map[key[i]] = i
-            else:
-                key_map[key[i]] = min(key_map[key[i]], i)
-    
+            key_map[key[i]] = min(key_map[key[i]], i) if key[i] in key_map.keys() else i
+
+    answer = []
     for target in targets:
         try:
             answer.append(sum([key_map[t] + 1 for t in target]))
