@@ -14,6 +14,6 @@ def solution(new_id):
     new_id = re.sub('\.$', '', new_id)
 
     if len(new_id) < min_len:
-        new_id = (new_id + new_id[-1] * min_len)[:min_len]
+        new_id = new_id + new_id[-1] * (min_len - len(new_id))
     
     return new_id
