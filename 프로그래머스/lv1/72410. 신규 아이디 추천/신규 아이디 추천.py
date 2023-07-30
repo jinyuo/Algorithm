@@ -10,10 +10,7 @@ def solution(new_id):
     new_id = re.sub('\.+', '.', new_id)
     new_id = re.sub('^\.|\.$', '', new_id)
     
-    if not new_id:
-        new_id = 'a'
-    elif len(new_id) >= max_len:
-        new_id = new_id[:max_len - 1]
+    new_id = new_id[:max_len - 1] if new_id else 'a'
     new_id = re.sub('\.$', '', new_id)
 
     if len(new_id) < min_len:
