@@ -1,10 +1,9 @@
 def solution(elements):
     answer = []
-    
-    for i in range(len(elements)):
-        s = 0
-        for j in range(len(elements)):
-            s += elements[(i+j) % len(elements)]
-            answer.append(s)
-    
+    elements += elements
+
+    for s in range(len(elements)//2):
+        for l in range(1, len(elements)//2 + 1):
+            answer.append(sum(elements[s:s + l]))
+
     return len(set(answer))
