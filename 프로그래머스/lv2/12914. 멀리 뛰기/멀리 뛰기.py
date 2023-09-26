@@ -12,5 +12,4 @@ def solution(n):
             answer += math.factorial(twos + ones) // (math.factorial(twos) * math.factorial(ones))
         twos -= 1
         ones += 2
-        answer %= 1234567
-    return answer
+    return answer % 1234567
