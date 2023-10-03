@@ -1,9 +1,9 @@
 def solution(n, left, right):
-    start_row, start_col = (left) // n, (left) % n
+    start_col = left % n
     end_row, end_col = (right) // n, (right) % n
     
     answer = []
-    for i in range(start_row, end_row + 1):
+    for i in range(left//n, end_row + 1):
         tmp = [i + 1 for t in range(n)]
         for j in range(i, n):
             tmp[j] += j - i
