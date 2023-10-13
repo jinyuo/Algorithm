@@ -2,10 +2,10 @@ from itertools import permutations
 
 def game(k, dungeons):
     cnt = 0
-    for dungeon in dungeons:
-        if k < dungeon[0]:
+    for require, consume in dungeons:
+        if k < require:
             return cnt
-        k -= dungeon[1]
+        k -= consume
         cnt += 1
     return cnt
     
