@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 69.5<br/>효율성: 30.5<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 11월 1일 21:26:24
 
 ### 문제 설명
 
@@ -65,4 +69,4 @@ Empty
 문제의 예시와 같습니다.</p>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
