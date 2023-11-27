@@ -12,11 +12,7 @@
 
 ### 채점결과
 
-정확성: 100.0<br/>합계: 100.0 / 100.0
-
-### 제출 일자
-
-2023년 11월 1일 20:47:0
+Empty
 
 ### 문제 설명
 
@@ -111,4 +107,4 @@
 </ul>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

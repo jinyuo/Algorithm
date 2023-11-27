@@ -1,6 +1,6 @@
 # [level 1] [카카오 인턴] 키패드 누르기 - 67256 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/67256) 
+[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67256) 
 
 ### 성능 요약
 
@@ -12,11 +12,7 @@
 
 ### 채점결과
 
-정확성: 100.0<br/>합계: 100.0 / 100.0
-
-### 제출 일자
-
-2023년 11월 1일 20:38:18
+<br/>정확성: 100.0<br/>합계: 100.0 / 100.0
 
 ### 문제 설명
 
@@ -188,4 +184,4 @@
 <p>오른손잡이가 [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]를 순서대로 누르면 사용한 손은 <code>"LLRLLRLLRL"</code>이 됩니다.</p>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

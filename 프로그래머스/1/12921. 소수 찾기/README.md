@@ -12,11 +12,7 @@
 
 ### 채점결과
 
-정확성: 75.0<br/>효율성: 25.0<br/>합계: 100.0 / 100.0
-
-### 제출 일자
-
-2023년 11월 1일 20:50:22
+Empty
 
 ### 문제 설명
 
@@ -57,4 +53,4 @@
 1부터 5 사이의 소수는 [2,3,5] 3개가 존재하므로 3를 반환</p>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
