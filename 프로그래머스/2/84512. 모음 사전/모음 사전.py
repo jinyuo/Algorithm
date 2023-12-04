@@ -1,10 +1,6 @@
-from itertools import permutations
+from itertools import product
 
 def solution(word):
-    raw = 'AEIOU' * 5
-    dictionaries = []
-    for i in range(1, 6):
-        dictionaries += set(''.join(t) for t in permutations(raw, i))
-    dictionaries = sorted(dictionaries)
-
-    return dictionaries.index(word) + 1
+    raw = 'AEIOU'
+    dictionaries = [''.join(t) for i in range(5) for t in product(raw, repeat=i + 1) ]
+    return sorted(dictionaries).index(word) + 1
