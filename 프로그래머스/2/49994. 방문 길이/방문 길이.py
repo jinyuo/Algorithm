@@ -8,8 +8,8 @@ def solution(dirs):
         dest = (src[0] + m[0], src[1] + m[1])
         
         if -5 <= dest[0] <= 5 and -5 <= dest[1] <= 5:
-            if (dest, src) not in ways:
-                ways.add((src, dest))
+            ways.add((src, dest))
+            ways.add((dest, src))
             src = dest
     
-    return len(ways)
+    return len(ways) // 2
