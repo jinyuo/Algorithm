@@ -1,12 +1,14 @@
 import string
 
-def convert(n, k):
+
+def num_base_convert(num, base):
     tmp = string.digits + string.ascii_uppercase
-    q, r = divmod(n, k)
-    if q == 0:
-        return tmp[r]
-    else:
-        return convert(q, k) + tmp[r]
+    result = ''
+    while num // base > 0:
+        num, r = divmod(num, base)
+        result = tmp[r] + result
+
+    return tmp[num] + result
 
 
 def solution(n, t, m, p):
@@ -14,7 +16,7 @@ def solution(n, t, m, p):
     str_num = ''
     num = 0
     while len(str_num) < m * t + p:
-        str_num += convert(num, n)
+        str_num += num_base_convert(num, n)
         num += 1
     
     return str_num[p-1::m][:t]
