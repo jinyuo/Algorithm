@@ -1,6 +1,4 @@
 from itertools import permutations
-from itertools import combinations
-
 
 def is_prime(n):
     if n <= 1: 
