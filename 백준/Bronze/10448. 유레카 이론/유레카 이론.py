@@ -12,9 +12,7 @@ memo = [0]
 for i in range(n):
     k = int(sys.stdin.readline())
     memo = memoization(memo, k)
-    tmp = [com for com in combinations_with_replacement(memo[1:], 3) if sum(com) == k]
+    filtered = [i for i in memo if 0 < i < k]
+    tmp = [com for com in combinations_with_replacement(filtered, 3) if sum(com) == k]
 
-    if tmp:
-        print(1)
-    else:
-        print(0)
+    print(1 if tmp else 0)
