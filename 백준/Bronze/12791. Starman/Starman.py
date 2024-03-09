@@ -26,13 +26,11 @@ data = """1967 DavidBowie
 2013 TheNextDay
 2016 BlackStar"""
 data = [d.split() for d in data.split('\n')]
-data = [[int(d[0]), d[1]] for d in data]
 
 n = int(sys.stdin.readline())
 for i in range(n):
     s, e = sys.stdin.readline().split()
-    s, e = int(s), int(e)
-    list_searched = [d for d in data if s <= d[0] <= e]
+    list_searched = [d for d in data if int(s) <= int(d[0]) <= int(e)]
     cnt = len(list_searched)
     print(cnt)
     if cnt > 0:
