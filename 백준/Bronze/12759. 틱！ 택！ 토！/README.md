@@ -8,13 +8,17 @@
 
 ### 분류
 
-많은 조건 분기(case_work), 구현(implementation), 시뮬레이션(simulation)
+많은 조건 분기, 구현, 시뮬레이션
+
+### 제출 일자
+
+2022년 6월 17일 17:07:34
 
 ### 문제 설명
 
 <p>틱택토(Tic-Tac-Toe)는 오목과 아주 유사한 형태의 보드게임이다.</p>
 
-<p><img alt="" src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/12759/1.png" style="height:203px; width:204px"></p>
+<p><img alt="" src="" style="height:203px; width:204px"></p>
 
 <p>게임 방법은 아래와 같다.</p>
 
