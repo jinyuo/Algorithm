@@ -1,4 +1,4 @@
-# [Silver IV] 순열 - 9742 
+# [Silver III] 순열 - 9742 
 
 [문제 링크](https://www.acmicpc.net/problem/9742) 
 
@@ -8,7 +8,11 @@
 
 ### 분류
 
-백트래킹(backtracking), 수학(math)
+백트래킹, 브루트포스 알고리즘
+
+### 제출 일자
+
+2022년 5월 10일 18:27:21
 
 ### 문제 설명
 
