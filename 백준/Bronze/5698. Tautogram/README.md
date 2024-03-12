@@ -1,4 +1,4 @@
-# [Bronze I] Tautogram - 5698 
+# [Bronze II] Tautogram - 5698 
 
 [문제 링크](https://www.acmicpc.net/problem/5698) 
 
@@ -8,7 +8,11 @@
 
 ### 분류
 
-구현(implementation), 파싱(parsing), 문자열(string)
+구현, 파싱, 문자열
+
+### 제출 일자
+
+2022년 6월 29일 20:03:37
 
 ### 문제 설명
 
