@@ -1,4 +1,4 @@
-# [Bronze I] Cryptoquote - 2703 
+# [Bronze II] Cryptoquote - 2703 
 
 [문제 링크](https://www.acmicpc.net/problem/2703) 
 
@@ -8,7 +8,11 @@
 
 ### 분류
 
-구현(implementation), 문자열(string)
+구현, 문자열
+
+### 제출 일자
+
+2022년 4월 25일 14:36:52
 
 ### 문제 설명
 
