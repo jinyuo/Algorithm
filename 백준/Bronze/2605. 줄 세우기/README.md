@@ -8,7 +8,11 @@
 
 ### 분류
 
-자료 구조(data_structures), 구현(implementation), 연결 리스트(linked_list)
+자료 구조, 구현
+
+### 제출 일자
+
+2022년 5월 21일 14:14:22
 
 ### 문제 설명
 
