@@ -1,16 +1,16 @@
 import sys
 
 
-def dfs(maps, n, m):
-    direrctions = [(1, 0), (0, -1), (-1, 0), (0, 1)]
+def dfs(maps, n, m, start=(0, 0)):
     visited = [[0 for _ in range(m)] for _ in range(n)]
-    queue = [(0, 0)]
-    visited[0][0] = 1
+    queue = [start]
+    visited[start[0]][start[1]] = 1
+    directions = [(1, 0), (0, -1), (-1, 0), (0, 1)]
 
     while queue:
         i, j = queue.pop(0)
 
-        for x, y in direrctions:
+        for x, y in directions:
             ni, ny = i + x, j + y
 
             if 0 <= ni < n and 0 <= ny < m and maps[ni][ny] == 1:
