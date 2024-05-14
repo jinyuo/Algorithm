@@ -2,7 +2,7 @@ import sys
 
 
 def bfs(maps, n, m, start=(0, 0)):
-    visited = [[0 for _ in range(m)] for _ in range(n)]
+    visited = [[False for _ in range(m)] for _ in range(n)]
     directions = [(1, 0), (0, -1), (-1, 0), (0, 1)]
     queue = [start]
     visited[start[0]][start[1]] = 1
@@ -16,7 +16,7 @@ def bfs(maps, n, m, start=(0, 0)):
             if 0 <= ni < n and 0 <= ny < m and maps[ni][ny] == 1:
                 if visited[ni][ny] == 0:
                     queue.append((ni, ny))
-                    visited[ni][ny] = visited[i][j] + 1
+                    visited[ni][ny] = True
 
     return visited
 
