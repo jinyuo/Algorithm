@@ -31,7 +31,7 @@ for i in range(n):
         if maps[i][j] == 1 and visited[i][j] == 0:
             temp = bfs(maps, n, n, start=(i, j))
             visited = [[temp[x][y] + visited[x][y] for y in range(n)] for x in range(n)]
-            list_cnt.append(len([i for i in sum(temp, []) if i > 0]))
+            list_cnt.append(len([i for i in sum(temp, []) if i]))
 
 list_cnt.sort()
 print(len(list_cnt))
