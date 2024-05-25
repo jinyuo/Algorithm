@@ -3,8 +3,7 @@ import sys
 case = int(sys.stdin.readline())
 for _ in range(case):
     N, M = map(int, sys.stdin.readline().split())
-    papers = list(map(int, sys.stdin.readline().split()))
-    queue = list(enumerate(papers))
+    queue = list(enumerate(map(int, sys.stdin.readline().split())))
 
     answer = 1
     while queue:
