@@ -2,8 +2,5 @@
 SELECT x
      , y
      , z
-     , CASE WHEN x + y + z - greatest(x, y, z) > greatest(x, y, z) 
-       THEN 'Yes' 
-       ELSE 'No' 
-       END AS triangle 
+     , IF(x + y + z - greatest(x, y, z) > greatest(x, y, z), 'Yes', 'No') AS triangle 
 FROM Triangle
