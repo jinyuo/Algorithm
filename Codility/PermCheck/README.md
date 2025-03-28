@@ -1,4 +1,4 @@
-## rmCheck
+## PermCheck
 [풀이 링크](https://app.codility.com/demo/results/trainingCQVKEJ-G48/)
 
 A non-empty array A consisting of N integers is given.
