@@ -1,25 +1,19 @@
+map_action = {
+    "Enter": "들어왔습니다.",
+    "Leave": "나갔습니다."
+}
+
 def solution(record):
-    answer = []
-
-    map_uid_uname = dict()
+    map_uid_nickname = dict()
     for r in record:
-        try:
-            cmd, uid, uname = r.split()
-        except ValueError:
-            cmd, uid = r.split()
-
-        if cmd in ('Enter', 'Change'):
-            map_uid_uname[uid] = uname
-
+        action, uid, *nickname = r.split(" ")
+        if action in ['Enter', 'Change']:
+            map_uid_nickname[uid] = nickname[0]
+    
+    result = []
     for r in record:
-        try:
-            cmd, uid, uname = r.split()
-        except ValueError:
-            cmd, uid = r.split()
-
-        if cmd == 'Enter':
-            answer.append(f'{map_uid_uname[uid]}님이 들어왔습니다.')
-        elif cmd == 'Leave':
-            answer.append(f'{map_uid_uname[uid]}님이 나갔습니다.')
-
-    return answer
+        action, uid, *nickname = r.split(" ")
+        if action in ['Enter', 'Leave']:
+            result.append(f"{map_uid_nickname[uid]}님이 {map_action[action]}")
+            
+    return result
