@@ -1,16 +1,14 @@
 import re
 
 def solution(files):
-    answer = []
+    pattern = '\d+'
+    list_files = []
+    for file in files:
+        number = re.search(pattern, file).group()
+        head, *tail = file.split(number)
+        list_files.append(
+            {'file': file, 'head': head.lower(), "number": int(number), "tail": tail[0].lower()}
+        )
+    list_files = sorted(list_files, key=lambda x: (x['head'], x['number']))
 
-    for f in files:
-        split = re.match('(?P<head>\D+)(?P<number>\d{1,5})(?P<tail>.*)', f).groupdict()
-        split['file'] = f
-        split['head'] = split['head'].lower()
-        split['number'] = int(split['number'])
-        answer.append(split)
-
-    answer = sorted(answer, key=lambda x: (x['head'], x['number']))
-    answer = [a['file'] for a in answer]
-
-    return answer
+    return [file['file'] for file in list_files]
