@@ -8,7 +8,7 @@ class Solution:
                 end += 1
                 max_length = max(max_length, end - start)
             else:
-                start = end
+                start += 1
                 end = start
 
         return max_length
